@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, Bell, Users, Home, UserCircle, Grid, MessageCircle } from "lucide-react";
+import { Search, Settings, Bell, Users, Home, UserCircle, Grid, MessageCircle } from "lucide-react";
 
 function Navbar() {
   return (
@@ -11,7 +11,7 @@ function Navbar() {
             <Search className="w-5 h-5 text-gray-500" />
             <input
               type="text"
-              placeholder="Pesquisar no SnapPost"
+              placeholder="Search in SnapPost"
               className="bg-transparent outline-none text-gray-700 placeholder-gray-500 w-full ml-2"
             />
           </div>
@@ -24,13 +24,7 @@ function Navbar() {
         </div>
 
         <div className="flex items-center space-x-2">
-          <button className="bg-gray-200 p-2 rounded-full">
-            <Search className="w-5 h-5 text-gray-600" />
-          </button>
-          <button className="bg-gray-200 p-2 rounded-full">
-            <Grid className="w-5 h-5 text-gray-600" />
-          </button>
-          <button className="bg-gray-200 p-2 rounded-full relative">
+        <button className="bg-gray-200 p-2 rounded-full relative">
             <MessageCircle className="w-5 h-5 text-gray-600" />
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
               1
@@ -41,6 +35,12 @@ function Navbar() {
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
               3
             </span>
+          </button>
+          <button className="bg-gray-200 p-2 rounded-full">
+            <Settings className="w-5 h-5 text-gray-600" />
+          </button>
+          <button className="bg-gray-200 p-2 rounded-full">
+            <Grid className="w-5 h-5 text-gray-600" />
           </button>
           <img src="src/assets/Joao.jpg" alt="perfil" className="w-8 h-8 rounded-full" />
         </div>

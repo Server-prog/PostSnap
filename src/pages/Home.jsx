@@ -1,5 +1,5 @@
 import React from "react";
-import { Users, Video, Bookmark, Calendar, Gamepad2, BarChart, MoreHorizontal, Heart, MessageCircle } from "lucide-react";
+import { Users,  BadgeCheck, Video, Bookmark, Calendar, Gamepad2, BarChart, MoreHorizontal, Heart, MessageCircle } from "lucide-react";
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
           <ul className="mt-4 space-y-2 text-gray-700">
             <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
               <Users className="w-5 h-5 text-blue-500" />
-              <span>Amigos</span>
+              <span>Friends</span>
             </li>
             <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
               <Video className="w-5 h-5 text-red-500" />
@@ -21,23 +21,23 @@ function Home() {
             </li>
             <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
               <Bookmark className="w-5 h-5 text-purple-500" />
-              <span>Guardados</span>
+              <span>Saved</span>
             </li>
             <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
               <Calendar className="w-5 h-5 text-yellow-500" />
-              <span>Eventos</span>
+              <span>Events</span>
             </li>
             <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
               <BarChart className="w-5 h-5 text-green-500" />
-              <span>Gestor de Anúncios</span>
+              <span>Statistics</span>
             </li>
             <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
               <Gamepad2 className="w-5 h-5 text-indigo-500" />
-              <span>Jogar jogos</span>
+              <span>play games</span>
             </li>
             <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
               <MoreHorizontal className="w-5 h-5 text-gray-500" />
-              <span>Ver mais</span>
+              <span>see more</span>
             </li>
           </ul>
         </aside>
@@ -48,18 +48,18 @@ function Home() {
               <img src="src/assets/Joao.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
               <input
                 type="text"
-                placeholder="Hoje é um bom dia para partilhares alguma novidade !"
+                placeholder="Today is a good day to share some news!"
                 className="w-full bg-gray-100 rounded-full px-4 py-2 outline-none"
               />
             </div>
             <div className="flex justify-around mt-4 text-gray-600">
               <button className="flex items-center space-x-1 text-red-500">
                 <Video className="w-5 h-5" />
-                <span>Vídeo em direto</span>
+                <span>Live video</span>
               </button>
               <button className="flex items-center space-x-1 text-green-500">
                 <Users className="w-5 h-5" />
-                <span>Foto/vídeo</span>
+                <span>Photo/video</span>
               </button>
             </div>
           </div>
@@ -68,13 +68,16 @@ function Home() {
             <div className="flex items-center space-x-3">
               <img src="src/assets/Joao.jpg" alt="perfil" className="w-14 h-14 rounded-full border-2 border-gray-300" />
               <div>
-                <p className="font-semibold text-lg">New Alberth</p>
+                <div className="flex items-center space-x-2">
+                  <p className="font-semibold text-lg">Top Head </p>
+                  <BadgeCheck className="w-4 h-4 text-blue-500" />
+                </div>
                 <span className="text-sm text-gray-500">5h</span>
               </div>
             </div>
-            <p className="mt-2 text-md">👋 melhorando a cada dia ✨</p>
+            <p className="mt-2 text-md">👋 SnapPost sua nova rede social, partilhe os momentos da tua vida para mundo inteiro, crie conexões e converse com pessoas de mundo inteiro✨</p>
             <div className="mt-3 border-t border-b border-black py-2 flex items-center justify-between">
-              <img src="src/assets/todo.png" alt="foto de perfil" className="w-full rounded-lg" />
+              <img src="src/assets/logo.img.jpg" alt="foto de perfil" className="w-full rounded-lg" />
             </div>
             <div className="flex items-center justify-between space-x-2 mt-4 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
@@ -83,7 +86,7 @@ function Home() {
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-5 h-5 text-gray-600" />
-                <p> Gosto</p>
+                <p> Comment </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Bookmark className="w-5 h-5 text-gray-600" />
@@ -93,75 +96,111 @@ function Home() {
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow mb-4">
-            <div className="flex items-center space-x-2">
-              <img src="src/assets/avatar.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
+            <div className="flex items-center space-x-3">
+              <img src="src/assets/David.jpg" alt="perfil" className="w-14 h-14 rounded-full border-2 border-gray-300" />
               <div>
-                <p className="font-semibold">Mia's Code</p>
-                <span className="text-sm text-gray-500">3d</span>
+                <div className="flex items-center space-x-2">
+                  <p className="font-semibold text-lg">David Armando </p>
+                  <BadgeCheck className="w-4 h-4 text-blue-500" />
+                </div>
+                <span className="text-sm text-gray-500">3h</span>
               </div>
             </div>
-            <p className="mt-2">🚀 Trabalhando em um novo projeto com React!</p>
+            <p className="mt-2 text-md">👋 Trabalhando com o banco de dados MySQL ✨</p>
+            <div className="mt-3 border-t border-b border-black py-2 flex items-center justify-between">
+              <img src="src/assets/tb user.png" alt="foto de perfil" className="w-full rounded-lg" />
+            </div>
+            <div className="flex items-center justify-between space-x-2 mt-4 text-sm text-gray-500">
+              <div className="flex items-center space-x-2">
+                <Heart className="w-5 h-5 text-gray-600" />
+                <p> Gosto</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MessageCircle className="w-5 h-5 text-gray-600" />
+                <p> Comment </p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Bookmark className="w-5 h-5 text-gray-600" />
+                <p> Save</p>
+              </div>
+            </div>
           </div>
+
           <div className="bg-white p-4 rounded-lg shadow mb-4">
-            <div className="flex items-center space-x-2">
-              <img src="src/assets/avatar.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
+            <div className="flex items-center space-x-3">
+              <img src="src/assets/Mbala.jpg" alt="perfil" className="w-14 h-14 rounded-full border-2 border-gray-300" />
               <div>
-                <p className="font-semibold">Mia's Code</p>
-                 <span className="text-sm text-gray-500">3d</span>
+                <div className="flex items-center space-x-2">
+                  <p className="font-semibold text-lg">Domingos Mbala </p>
+                  <BadgeCheck className="w-4 h-4 text-blue-500" />
+                </div>
+                <span className="text-sm text-gray-500">5h</span>
               </div>
             </div>
-            <p className="mt-2">🚀 Trabalhando em um novo projeto com React!</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow mb-4">
-            <div className="flex items-center space-x-2">
-              <img src="src/assets/avatar.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
-              <div>
-                <p className="font-semibold">Mia's Code</p>
-                <span className="text-sm text-gray-500">3d</span>
+            <p className="mt-2 text-md">👋 SnapPost sua nova rede social, partilhe os momentos da tua vida para mundo inteiro, crie conexões e converse com pessoas de mundo inteiro✨</p>
+            <div className="mt-3 border-t border-b border-black py-2 flex items-center justify-between">
+              <img src="src/assets/logo.img.jpg" alt="foto de perfil" className="w-full rounded-lg" />
+            </div>
+            <div className="flex items-center justify-between space-x-2 mt-4 text-sm text-gray-500">
+              <div className="flex items-center space-x-2">
+                <Heart className="w-5 h-5 text-gray-600" />
+                <p> Gosto</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MessageCircle className="w-5 h-5 text-gray-600" />
+                <p> Comment </p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Bookmark className="w-5 h-5 text-gray-600" />
+                <p> Save</p>
               </div>
             </div>
-            <p className="mt-2">🚀 Trabalhando em um novo projeto com React!</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow mb-4">
-            <div className="flex items-center space-x-2">
-              <img src="src/assets/avatar.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
-              <div>
-                <p className="font-semibold">Mia's Code</p>                  <span className="text-sm text-gray-500">3d</span>
-              </div>
-            </div>
-            <p className="mt-2">🚀 Trabalhando em um novo projeto com React!</p>
-          </div>
+
+         
         </main>
 
-        <aside className="w-[280px] p-4 rounded-lg shadow sticky top-4 h-[calc(100vh-32px)]">
-          <h2 className="font-semibold">Pedidos de amizade</h2>
-          <div className="flex items-center space-x-2 mt-2">
-            <img src="src/assets/avatar.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
-            <div>
-              <p className="font-semibold">Joséfina Morais</p>
-              <span className="text-sm text-gray-500">1 amigo em comum</span>
+        <aside className="w-1/5 border rounded-lg p-4 min-h-screen">
+          <h3 className="flex justify-center text-lg mb-4">Weekly Activity</h3>
+          <div className="border border-black p-3 rounded-md mb-2">
+            <div className="flex items-center space-x-2">
+              <img src="src/assets/Joao.jpg" alt="perfil" className="w-10 h-10 rounded-full mr-2" />
+              <div className="flex-1">
+                <p className="text-sm font-semibold">Top Head Community</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2 bg-white border rounded-lg mt-2">
+              <span className="text-xs flex justify-center ml-2 text-gray-400">August 23 at 6:30pm</span>
+                <button className="bg-blue-400 text-black px-3 py-1 text-sm rounded">Check</button>
             </div>
           </div>
-          <div className="flex space-x-2 mt-2">
-            <button className="flex-1 bg-blue-500 text-white py-1 rounded">Confirmar</button>
-            <button className="flex-1 bg-gray-300 text-black py-1 rounded">Eliminar</button>
-          </div>
+          <div className="border border-black p-3 rounded-md mb-2">
+            <div className="flex items-center space-x-2">
+              <img src="src/assets/Joao.jpg" alt="perfil" className="w-10 h-10 rounded-full mr-2" />
+              <div className="flex-1">
+                <p className="text-sm font-semibold">Top Head</p>
+              </div>
+            </div>
 
-          <h2 className="font-semibold mt-4">Contactos</h2>
-          <ul className="mt-2 space-y-2">
-            <li className="flex items-center space-x-2">
-              <img src="src/assets/avatar.jpg" alt="perfil" className="w-8 h-8 rounded-full" />
-              <span>José Dias</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <img src="src/assets/avatar.jpg" alt="perfil" className="w-8 h-8 rounded-full" />
-              <span>Gelson Antonio</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <img src="src/assets/avatar.jpg" alt="perfil" className="w-8 h-8 rounded-full" />
-              <span>Omar Rodrigues</span>
-            </li>
-          </ul>
+            <div className="flex items-center space-x-2 bg-white border rounded-lg mt-2">
+              <span className="text-xs flex justify-center ml-2 text-gray-400">August 23 at 6:30pm</span>
+                <button className="bg-blue-400 text-black px-3 py-1 text-sm rounded">Check</button>
+            </div>
+          </div>
+          <div className="border border-black p-3 rounded-md mb-2">
+            <div className="flex items-center space-x-2">
+              <img src="src/assets/Joao.jpg" alt="perfil" className="w-10 h-10 rounded-full mr-2" />
+              <div className="flex-1">
+                <p className="text-sm font-semibold">Impruvement Lab</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2 bg-white border rounded-lg mt-2">
+              <span className="text-xs flex justify-center ml-2 text-gray-400">August 23 at 6:30pm</span>
+                <button className="bg-blue-400 text-black px-3 py-1 text-sm rounded">Check</button>
+            </div>
+          </div>
         </aside>
 
       </div>
