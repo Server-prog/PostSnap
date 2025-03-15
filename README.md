@@ -3,6 +3,11 @@
 É um blog que está atualmente em desenvolvimento.
 Estou a utilizar o React JS para o desenvolvimento.
 
+
+Nota de hoje:
+
+Terminei a tela home, agora vou começar a desenvolver a tela de chat e o espaço onde o usuario vai fazer os seus posts.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
