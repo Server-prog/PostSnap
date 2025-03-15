@@ -1,6 +1,7 @@
-# React + Vite
+# PostSnap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+É um blog que está atualmente em desenvolvimento.
+Estou a utilizar o React JS para o desenvolvimento.
 
 Currently, two official plugins are available:
 
