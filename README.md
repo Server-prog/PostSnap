@@ -3,6 +3,8 @@
 É um blog que está atualmente em desenvolvimento.
 Estou a utilizar o React JS para o desenvolvimento.
 
+ATT: Ainda não é possivel teres acesso a home e nem a outras pages, apenas teras acesso a telas de cadastro e login.
+
 
 Nota de hoje:
 
