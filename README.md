@@ -6,17 +6,30 @@ Estou a utilizar o React JS para o desenvolvimento.
 
 Nota de hoje:
 
-Acebei de dar os ultimos retoques no na interface do home, adicionei o modal onde o usuario pode fazer os seus posts
+Hoje, a gente avançou bastante na funcionalidade de criação de posts na tua aplicação! 🚀 Aqui está um resumo do que fizemos:
 
-Proximos passos :
+## Melhoramos a funcionalidade do modal de criação de posts
 
-Adicionar o chat e depois disso vou começar a trabalhar na performance do projeto integrando algumas bibliotecas como o zod, framer motion e outras bibliotecas para melhorar a experiencia do usuario.
+O usuário agora pode escrever um texto e adicionar imagens antes de postar.
+Melhoramos a exibição de imagens prévias no modal.
+Garantimos que o botão "Publicar" só funciona se houver conteúdo + imagem.
 
-Currently, two official plugins are available:
+## Integramos a funcionalidade de envio do post para a API do PostSnap
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Criamos a função handlePostSubmit, que:
+Valida se o post tem texto e imagem antes de enviar.
+Envia os dados para o backend via createPost(imageFile, content).
+Mostra alertas informando se a postagem foi bem-sucedida ou se deu erro.
+Fecha o modal após o envio com sucesso.
 
-## Expanding the ESLint configuration
+## Depuramos um erro de envio do post
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+O erro "Erro ao enviar o post" apareceu, então adicionamos console.log() para ver:
+Se o arquivo da imagem está sendo corretamente capturado.
+A resposta da API, para entender se o problema vem do frontend ou do backend.
+Caso a API esteja falhando, decidimos testar a requisição manualmente com o Postman para tentar entender melhor o problema.
+
+## Próximos passos
+
+Testar se os console.log() ajudam a identificar o erro no envio do post.
+Se ainda não funcionar, vamos verificar se o PostSnap está aceitando corretamente as imagens.

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
+import Chat from "../pages/Chat";
 import Emailconfirmation from "../pages/Emailconfirmation";
 import Resetpassword from "../pages/Resetpassword";
 import Navbar from "../components/Navbar";
@@ -21,6 +22,7 @@ function AppLayout() {
           <Route path="/" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/chat" element={<Chat />} />
           <Route path="/emailconfirmation" element={<Emailconfirmation />} />
           <Route path="/resetpassword" element={<Resetpassword />} />
         </Routes>

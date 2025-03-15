@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Search, Settings, Bell, Users, Home, UserCircle, Grid, MessageCircle } from "lucide-react";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <nav className="p-4 flex items-center bg-white h-[70px] justify-center shadow-md">
       <div className="flex items-center justify-between px-4 py-2 w-[1200px] max-w-full">
@@ -18,14 +21,14 @@ function Navbar() {
         </div>
 
         <div className="flex space-x-6">
-          <Home className="w-6 h-6 text-blue-600 cursor-pointer" />
+          <Home className="w-6 h-6 text-gray-600 cursor-pointer" onClick={() => navigate("/home")} />
           <Users className="w-6 h-6 text-gray-600 cursor-pointer" />
           <UserCircle className="w-6 h-6 text-gray-600 cursor-pointer" />
         </div>
 
         <div className="flex items-center space-x-2">
         <button className="bg-gray-200 p-2 rounded-full relative">
-            <MessageCircle className="w-5 h-5 text-gray-600" />
+            <MessageCircle className="w-5 h-5 text-gray-600" onClick={() => navigate("/chat") } />
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
               1
             </span>
