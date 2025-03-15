@@ -1,10 +1,9 @@
-import { X } from "lucide-react";
+import { X, Lock, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-function PostModal({ isOpen, onClose }) {
+function PostModal({ onClose }) {
+  const [selectedOption, setSelectedOption] = useState("public");
   const [images, setImages] = useState([]);
-
-  if (!isOpen) return null;
 
   const previewImages = (event) => {
     const files = event.target.files;
@@ -28,19 +27,38 @@ function PostModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-[#8FA6B3] p-6 border border-black w-96">
+      <div className="bg-white p-6 border rounded-lg border-black w-[500px]">
         <div className="flex justify-between items-center border-b border-black pb-2">
           <h2 className="text-lg font-bold">Create a new post</h2>
           <button onClick={onClose} className="text-gray-500 hover:text-black">
             <X className="w-5 h-5" />
           </button>
         </div>
+          <div className="flex items-center space-x-2 mt-2">
+            <img src="src/assets/Joao.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
+            <div className="flex flex-col">
+              <span className="font-semibold">João Tambue</span>
+              <div className="relative bg-[#D9D9D9] text-black rounded-full p-1 text-xs flex items-center cursor-pointer">
+                {selectedOption === "public" ? (
+                  <Globe className="w-4 h-4 text-black ml-2" />
+                  ) : (
+                  <Lock className="w-4 h-4 text-black ml-2" />
+                )}
+                <span className="ml-2">{selectedOption === "public" ? "Pública" : "Privada"}</span>
+                <ChevronDown className="w-4 h-4 text-black ml-auto mr-2" />
+                <select className="absolute inset-0 opacity-0 cursor-pointer" onChange={(e) => setSelectedOption(e.target.value)} value={selectedOption}>
+                  <option value="public">Pública</option>
+                  <option value="private">Privada</option>
+                </select>
+              </div>
+            </div>
+          </div>
         <textarea
           className="w-full mt-4 p-2 border bg-[#D9D9D9] rounded-lg border-black"
           placeholder="Escreva algo..."
         />
         {!images.length && (
-          <div className="w-full max-w-md mx-auto">
+          <div className="w-full max-w-md mx-auto gap-2 mt-4">
             <label
               htmlFor="image-upload"
               className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-gray-400 rounded-lg cursor-pointer bg-gray-100 hover:border-blue-500 hover:bg-gray-200"
@@ -88,7 +106,7 @@ function PostModal({ isOpen, onClose }) {
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="mt-4 w-46 bg-[#D9D9D9] text-black rounded-md p-2">
+          <button className="mt-2 w-full bg-blue-500 text-black rounded-md p-2">
             Publicar
           </button>
         </div>

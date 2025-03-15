@@ -6,7 +6,11 @@ Estou a utilizar o React JS para o desenvolvimento.
 
 Nota de hoje:
 
-Terminei a tela home, agora vou começar a desenvolver a tela de chat e o espaço onde o usuario vai fazer os seus posts.
+Acebei de dar os ultimos retoques no na interface do home, adicionei o modal onde o usuario pode fazer os seus posts
+
+Proximos passos :
+
+Adicionar o chat e depois disso vou começar a trabalhar na performance do projeto integrando algumas bibliotecas como o zod, framer motion e outras bibliotecas para melhorar a experiencia do usuario.
 
 Currently, two official plugins are available:
 

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import PostModal from "../components/PostModal";
 import { Users,  BadgeCheck, Video, Bookmark, Calendar, Gamepad2, BarChart, MoreHorizontal, Heart, MessageCircle } from "lucide-react";
 
-function Home() {
+const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="flex justify-center bg-gray-100 min-h-screen">
       <div className="w-[1200px] max-w-full flex gap-4 py-4">
@@ -46,11 +49,12 @@ function Home() {
           <div className="bg-white p-4 rounded-lg shadow mb-4">
             <div className="flex items-center space-x-2">
               <img src="src/assets/Joao.jpg" alt="perfil" className="w-10 h-10 rounded-full" />
-              <input
-                type="text"
-                placeholder="Today is a good day to share some news!"
-                className="w-full bg-gray-100 rounded-full px-4 py-2 outline-none"
-              />
+              <h1 className="w-full bg-gray-100 rounded-full px-4 py-2 cursor-pointer text-gray-500" 
+                onClick={() => setIsModalOpen(true)}>
+              Today is a good day to share some news !
+                
+              </h1>
+              
             </div>
             <div className="flex justify-around mt-4 text-gray-600">
               <button className="flex items-center space-x-1 text-red-500">
@@ -204,6 +208,7 @@ function Home() {
         </aside>
 
       </div>
+      {isModalOpen && <PostModal onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 }
